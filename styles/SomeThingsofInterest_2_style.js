@@ -6,7 +6,7 @@ function categories_SomeThingsofInterest_2(feature, value, size, resolution, lab
                 var valueStr = (value !== null && value !== undefined) ? value.toString() : 'default';
                 switch(valueStr) {case 'Building':
                     return [ new ol.style.Style({
-        image: new ol.style.RegularShape({radius: 5.999999999999998 + size, points: 4,
+        image: new ol.style.RegularShape({radius: 6.0 + size, points: 4,
             stroke: new ol.style.Stroke({color: 'rgba(50,87,128,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(200,69,115,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
@@ -15,7 +15,7 @@ function categories_SomeThingsofInterest_2(feature, value, size, resolution, lab
                     break;
 case 'Earthworks':
                     return [ new ol.style.Style({
-        image: new ol.style.RegularShape({radius: 5.999999999999998 + size, points: 4,
+        image: new ol.style.RegularShape({radius: 6.0 + size, points: 4,
             stroke: new ol.style.Stroke({color: 'rgba(50,87,128,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(205,137,91,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
@@ -24,7 +24,7 @@ case 'Earthworks':
                     break;
 case 'Memorial':
                     return [ new ol.style.Style({
-        image: new ol.style.RegularShape({radius: 5.999999999999998 + size, points: 4,
+        image: new ol.style.RegularShape({radius: 6.0 + size, points: 4,
             stroke: new ol.style.Stroke({color: 'rgba(50,87,128,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(182,201,76,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
@@ -33,7 +33,7 @@ case 'Memorial':
                     break;
 case 'Nothing':
                     return [ new ol.style.Style({
-        image: new ol.style.RegularShape({radius: 5.999999999999998 + size, points: 4,
+        image: new ol.style.RegularShape({radius: 6.0 + size, points: 4,
             stroke: new ol.style.Stroke({color: 'rgba(50,87,128,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(75,50,201,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
@@ -42,7 +42,7 @@ case 'Nothing':
                     break;
 case 'Plane Wreck':
                     return [ new ol.style.Style({
-        image: new ol.style.RegularShape({radius: 5.999999999999998 + size, points: 4,
+        image: new ol.style.RegularShape({radius: 6.0 + size, points: 4,
             stroke: new ol.style.Stroke({color: 'rgba(50,87,128,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(66,222,49,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
@@ -51,7 +51,7 @@ case 'Plane Wreck':
                     break;
 case 'Ruin':
                     return [ new ol.style.Style({
-        image: new ol.style.RegularShape({radius: 5.999999999999998 + size, points: 4,
+        image: new ol.style.RegularShape({radius: 6.0 + size, points: 4,
             stroke: new ol.style.Stroke({color: 'rgba(50,87,128,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(218,89,232,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
@@ -60,7 +60,7 @@ case 'Ruin':
                     break;
 case 'Unknown':
                     return [ new ol.style.Style({
-        image: new ol.style.RegularShape({radius: 5.999999999999998 + size, points: 4,
+        image: new ol.style.RegularShape({radius: 6.0 + size, points: 4,
             stroke: new ol.style.Stroke({color: 'rgba(50,87,128,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(18,129,203,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,

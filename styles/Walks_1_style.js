@@ -6,7 +6,7 @@ var style_Walks_1 = function(feature, resolution){
         feature: feature,
         variables: {}
     };
-    var value = feature.get("Length");
+    var value = feature.get("( $length ) / 1000");
     var labelText = "";
     size = 0;
     var labelFont = "13.0px \'Open Sans\', sans-serif";
