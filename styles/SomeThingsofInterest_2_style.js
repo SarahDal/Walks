@@ -66,6 +66,15 @@ case 'Unknown':
                               labelFill, placement, bufferColor,
                               bufferWidth)
     })];
+                    break;
+case 'Boundary Stone':
+                    return [ new ol.style.Style({
+        image: new ol.style.RegularShape({radius: 6.0 + size, points: 4,
+            stroke: new ol.style.Stroke({color: 'rgba(50,87,128,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(255,234,70,1.0)'})}),
+        text: createTextStyle(feature, resolution, labelText, labelFont,
+                              labelFill, placement, bufferColor,
+                              bufferWidth)
+    })];
                     break;}};
 
 var style_SomeThingsofInterest_2 = function(feature, resolution){
