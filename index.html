@@ -34,12 +34,12 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="data/Walks_1.js"></script>
-        <script src="data/SomeThingsofInterest_2.js"></script>
+        <script src="data/Walks_3.js"></script>
+        <script src="data/SomeThingsofInterest_4.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[55.30517278748281,-2.224170313934321],[55.4805591411725,-1.7480228345091464]]);
+        }).fitBounds([[55.470483034220116,-2.169780219614849],[55.51437191122962,-2.050584693854501]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -87,10 +87,10 @@
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        map.createPane('pane_ThunderforestLandscape_0');
-        map.getPane('pane_ThunderforestLandscape_0').style.zIndex = 400;
-        var layer_ThunderforestLandscape_0 = L.tileLayer('https://tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=a17c8af5748d4df29e796b6c5dd78826', {
-            pane: 'pane_ThunderforestLandscape_0',
+        map.createPane('pane_OpenTopo_0');
+        map.getPane('pane_OpenTopo_0').style.zIndex = 400;
+        var layer_OpenTopo_0 = L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png ', {
+            pane: 'pane_OpenTopo_0',
             opacity: 1.0,
             attribution: '',
             minZoom: 1,
@@ -98,9 +98,35 @@
             minNativeZoom: 0,
             maxNativeZoom: 18
         });
-        layer_ThunderforestLandscape_0;
-        map.addLayer(layer_ThunderforestLandscape_0);
-        function pop_Walks_1(feature, layer) {
+        layer_OpenTopo_0;
+        map.addLayer(layer_OpenTopo_0);
+        map.createPane('pane_ThunderforestOutdoors_1');
+        map.getPane('pane_ThunderforestOutdoors_1').style.zIndex = 401;
+        var layer_ThunderforestOutdoors_1 = L.tileLayer('https://tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=a17c8af5748d4df29e796b6c5dd78826', {
+            pane: 'pane_ThunderforestOutdoors_1',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 18
+        });
+        layer_ThunderforestOutdoors_1;
+        map.addLayer(layer_ThunderforestOutdoors_1);
+        map.createPane('pane_ThunderforestLandscape_2');
+        map.getPane('pane_ThunderforestLandscape_2').style.zIndex = 402;
+        var layer_ThunderforestLandscape_2 = L.tileLayer('https://tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=a17c8af5748d4df29e796b6c5dd78826', {
+            pane: 'pane_ThunderforestLandscape_2',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 18
+        });
+        layer_ThunderforestLandscape_2;
+        map.addLayer(layer_ThunderforestLandscape_2);
+        function pop_Walks_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>Walk Name</strong><br />' + (feature.properties['FileName'] !== null ? autolinker.link(feature.properties['FileName'].toLocaleString()) : '') + '</td>\
@@ -123,10 +149,10 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Walks_1_0(feature) {
+        function style_Walks_3_0(feature) {
             if (feature.properties['Length'] >= 0.000000 && feature.properties['Length'] <= 10.000000 ) {
                 return {
-                pane: 'pane_Walks_1',
+                pane: 'pane_Walks_3',
                 opacity: 1,
                 color: 'rgba(253,231,37,1.0)',
                 dashArray: '',
@@ -139,7 +165,7 @@
             }
             if (feature.properties['Length'] >= 10.000000 && feature.properties['Length'] <= 15.000000 ) {
                 return {
-                pane: 'pane_Walks_1',
+                pane: 'pane_Walks_3',
                 opacity: 1,
                 color: 'rgba(93,201,99,1.0)',
                 dashArray: '',
@@ -152,7 +178,7 @@
             }
             if (feature.properties['Length'] >= 15.000000 && feature.properties['Length'] <= 20.000000 ) {
                 return {
-                pane: 'pane_Walks_1',
+                pane: 'pane_Walks_3',
                 opacity: 1,
                 color: 'rgba(33,144,141,1.0)',
                 dashArray: '',
@@ -165,7 +191,7 @@
             }
             if (feature.properties['Length'] >= 20.000000 && feature.properties['Length'] <= 25.000000 ) {
                 return {
-                pane: 'pane_Walks_1',
+                pane: 'pane_Walks_3',
                 opacity: 1,
                 color: 'rgba(59,82,139,1.0)',
                 dashArray: '',
@@ -178,7 +204,7 @@
             }
             if (feature.properties['Length'] >= 25.000000 && feature.properties['Length'] <= 62.090000 ) {
                 return {
-                pane: 'pane_Walks_1',
+                pane: 'pane_Walks_3',
                 opacity: 1,
                 color: 'rgba(68,1,84,1.0)',
                 dashArray: '',
@@ -190,21 +216,21 @@
             }
             }
         }
-        map.createPane('pane_Walks_1');
-        map.getPane('pane_Walks_1').style.zIndex = 401;
-        map.getPane('pane_Walks_1').style['mix-blend-mode'] = 'normal';
-        var layer_Walks_1 = new L.geoJson(json_Walks_1, {
+        map.createPane('pane_Walks_3');
+        map.getPane('pane_Walks_3').style.zIndex = 403;
+        map.getPane('pane_Walks_3').style['mix-blend-mode'] = 'normal';
+        var layer_Walks_3 = new L.geoJson(json_Walks_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Walks_1',
-            layerName: 'layer_Walks_1',
-            pane: 'pane_Walks_1',
-            onEachFeature: pop_Walks_1,
-            style: style_Walks_1_0,
+            dataVar: 'json_Walks_3',
+            layerName: 'layer_Walks_3',
+            pane: 'pane_Walks_3',
+            onEachFeature: pop_Walks_3,
+            style: style_Walks_3_0,
         });
-        bounds_group.addLayer(layer_Walks_1);
-        map.addLayer(layer_Walks_1);
-        function pop_SomeThingsofInterest_2(feature, layer) {
+        bounds_group.addLayer(layer_Walks_3);
+        map.addLayer(layer_Walks_3);
+        function pop_SomeThingsofInterest_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Name'] !== null ? autolinker.link(feature.properties['Name'].toLocaleString()) : '') + '</td>\
@@ -224,11 +250,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_SomeThingsofInterest_2_0(feature) {
+        function style_SomeThingsofInterest_4_0(feature) {
             switch(String(feature.properties['Type'])) {
                 case 'Building':
                     return {
-                pane: 'pane_SomeThingsofInterest_2',
+                pane: 'pane_SomeThingsofInterest_4',
                 shape: 'diamond',
                 radius: 6.0,
                 opacity: 1,
@@ -245,7 +271,7 @@
                     break;
                 case 'Earthworks':
                     return {
-                pane: 'pane_SomeThingsofInterest_2',
+                pane: 'pane_SomeThingsofInterest_4',
                 shape: 'diamond',
                 radius: 6.0,
                 opacity: 1,
@@ -262,7 +288,7 @@
                     break;
                 case 'Memorial':
                     return {
-                pane: 'pane_SomeThingsofInterest_2',
+                pane: 'pane_SomeThingsofInterest_4',
                 shape: 'diamond',
                 radius: 6.0,
                 opacity: 1,
@@ -279,7 +305,7 @@
                     break;
                 case 'Nothing':
                     return {
-                pane: 'pane_SomeThingsofInterest_2',
+                pane: 'pane_SomeThingsofInterest_4',
                 shape: 'diamond',
                 radius: 6.0,
                 opacity: 1,
@@ -296,7 +322,7 @@
                     break;
                 case 'Plane Wreck':
                     return {
-                pane: 'pane_SomeThingsofInterest_2',
+                pane: 'pane_SomeThingsofInterest_4',
                 shape: 'diamond',
                 radius: 6.0,
                 opacity: 1,
@@ -313,7 +339,7 @@
                     break;
                 case 'Ruin':
                     return {
-                pane: 'pane_SomeThingsofInterest_2',
+                pane: 'pane_SomeThingsofInterest_4',
                 shape: 'diamond',
                 radius: 6.0,
                 opacity: 1,
@@ -330,7 +356,7 @@
                     break;
                 case 'Unknown':
                     return {
-                pane: 'pane_SomeThingsofInterest_2',
+                pane: 'pane_SomeThingsofInterest_4',
                 shape: 'diamond',
                 radius: 6.0,
                 opacity: 1,
@@ -347,7 +373,7 @@
                     break;
                 case 'Boundary Stone':
                     return {
-                pane: 'pane_SomeThingsofInterest_2',
+                pane: 'pane_SomeThingsofInterest_4',
                 shape: 'diamond',
                 radius: 6.0,
                 opacity: 1,
@@ -364,30 +390,32 @@
                     break;
             }
         }
-        map.createPane('pane_SomeThingsofInterest_2');
-        map.getPane('pane_SomeThingsofInterest_2').style.zIndex = 402;
-        map.getPane('pane_SomeThingsofInterest_2').style['mix-blend-mode'] = 'normal';
-        var layer_SomeThingsofInterest_2 = new L.geoJson(json_SomeThingsofInterest_2, {
+        map.createPane('pane_SomeThingsofInterest_4');
+        map.getPane('pane_SomeThingsofInterest_4').style.zIndex = 404;
+        map.getPane('pane_SomeThingsofInterest_4').style['mix-blend-mode'] = 'normal';
+        var layer_SomeThingsofInterest_4 = new L.geoJson(json_SomeThingsofInterest_4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_SomeThingsofInterest_2',
-            layerName: 'layer_SomeThingsofInterest_2',
-            pane: 'pane_SomeThingsofInterest_2',
-            onEachFeature: pop_SomeThingsofInterest_2,
+            dataVar: 'json_SomeThingsofInterest_4',
+            layerName: 'layer_SomeThingsofInterest_4',
+            pane: 'pane_SomeThingsofInterest_4',
+            onEachFeature: pop_SomeThingsofInterest_4,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.shapeMarker(latlng, style_SomeThingsofInterest_2_0(feature));
+                return L.shapeMarker(latlng, style_SomeThingsofInterest_4_0(feature));
             },
         });
-        bounds_group.addLayer(layer_SomeThingsofInterest_2);
-        map.addLayer(layer_SomeThingsofInterest_2);
+        bounds_group.addLayer(layer_SomeThingsofInterest_4);
+        map.addLayer(layer_SomeThingsofInterest_4);
         var overlaysTree = [
-            {label: 'Some Things of Interest<br /><table><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_2_Building0.png" /></td><td>Building</td></tr><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_2_Earthworks1.png" /></td><td>Earthworks</td></tr><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_2_Memorial2.png" /></td><td>Memorial</td></tr><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_2_Nothing3.png" /></td><td>Nothing</td></tr><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_2_PlaneWreck4.png" /></td><td>Plane Wreck</td></tr><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_2_Ruin5.png" /></td><td>Ruin</td></tr><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_2_Unknown6.png" /></td><td>Unknown</td></tr><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_2_BoundaryStone7.png" /></td><td>Boundary Stone</td></tr></table>', layer: layer_SomeThingsofInterest_2},
-            {label: 'Walks<br /><table><tr><td style="text-align: center;"><img src="legend/Walks_1_upto10km0.png" /></td><td>up to 10 km</td></tr><tr><td style="text-align: center;"><img src="legend/Walks_1_1015km1.png" /></td><td>10 - 15 km</td></tr><tr><td style="text-align: center;"><img src="legend/Walks_1_1520km2.png" /></td><td>15 - 20 km</td></tr><tr><td style="text-align: center;"><img src="legend/Walks_1_2025km3.png" /></td><td>20 - 25 km</td></tr><tr><td style="text-align: center;"><img src="legend/Walks_1_25km4.png" /></td><td>25 + km</td></tr></table>', layer: layer_Walks_1},
-            {label: "Thunderforest Landscape", layer: layer_ThunderforestLandscape_0},]
+            {label: 'Some Things of Interest<br /><table><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_4_Building0.png" /></td><td>Building</td></tr><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_4_Earthworks1.png" /></td><td>Earthworks</td></tr><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_4_Memorial2.png" /></td><td>Memorial</td></tr><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_4_Nothing3.png" /></td><td>Nothing</td></tr><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_4_PlaneWreck4.png" /></td><td>Plane Wreck</td></tr><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_4_Ruin5.png" /></td><td>Ruin</td></tr><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_4_Unknown6.png" /></td><td>Unknown</td></tr><tr><td style="text-align: center;"><img src="legend/SomeThingsofInterest_4_BoundaryStone7.png" /></td><td>Boundary Stone</td></tr></table>', layer: layer_SomeThingsofInterest_4},
+            {label: 'Walks<br /><table><tr><td style="text-align: center;"><img src="legend/Walks_3_upto10km0.png" /></td><td>up to 10 km</td></tr><tr><td style="text-align: center;"><img src="legend/Walks_3_1015km1.png" /></td><td>10 - 15 km</td></tr><tr><td style="text-align: center;"><img src="legend/Walks_3_1520km2.png" /></td><td>15 - 20 km</td></tr><tr><td style="text-align: center;"><img src="legend/Walks_3_2025km3.png" /></td><td>20 - 25 km</td></tr><tr><td style="text-align: center;"><img src="legend/Walks_3_25km4.png" /></td><td>25 + km</td></tr></table>', layer: layer_Walks_3},
+            {label: "Thunderforest Landscape", layer: layer_ThunderforestLandscape_2},
+            {label: "Thunderforest Outdoors", layer: layer_ThunderforestOutdoors_1},
+            {label: "OpenTopo", layer: layer_OpenTopo_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
             //selectorBack: false,
@@ -449,15 +477,15 @@
             }  
         });       
         setBounds();
-        resetLabels([layer_Walks_1]);
+        resetLabels([layer_Walks_3]);
         map.on("zoomend", function(){
-            resetLabels([layer_Walks_1]);
+            resetLabels([layer_Walks_3]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_Walks_1]);
+            resetLabels([layer_Walks_3]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_Walks_1]);
+            resetLabels([layer_Walks_3]);
         });
         </script>
     </body>
