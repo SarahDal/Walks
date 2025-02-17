@@ -6,16 +6,15 @@ var style_Walks_2 = function(feature, resolution){
         feature: feature,
         variables: {}
     };
-    var value = feature.get("Length");
-    var labelText = "";
-    size = 0;
+    
+    var labelText = ""; var value = feature.get("Length");
     var labelFont = "13.0px \'Open Sans\', sans-serif";
     var labelFill = "#323232";
     var bufferColor = "#fafafa";
     var bufferWidth = 1.0;
     var textAlign = "left";
-    var offsetX = 8;
-    var offsetY = 3;
+    var offsetX = 0;
+    var offsetY = 0;
     var placement = 'line';
     if ("" !== null) {
         labelText = String("");

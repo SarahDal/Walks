@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-236903.379053, 7467047.512050, -230701.848906, 7472778.329008], map.getSize());
+map.getView().fit([-348433.365607, 7374463.956119, -177123.685859, 7459675.510538], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -169,7 +169,6 @@ function onPointerMove(evt) {
     }
     var pixel = map.getEventPixel(evt.originalEvent);
     var coord = evt.coordinate;
-    var popupField;
     var currentFeature;
     var currentLayer;
     var currentFeatureKeys;
@@ -190,7 +189,6 @@ function onPointerMove(evt) {
             if (clusteredFeatures) {
 				clusterLength = clusteredFeatures.length;
 			}
-            var clusterFeature;
             if (typeof clusteredFeatures !== "undefined") {
                 if (doPopup) {
                     for(var n=0; n<clusteredFeatures.length; n++) {
@@ -314,7 +312,6 @@ function onSingleClickFeatures(evt) {
     }
     var pixel = map.getEventPixel(evt.originalEvent);
     var coord = evt.coordinate;
-    var popupField;
     var currentFeature;
     var currentFeatureKeys;
     var clusteredFeatures;
@@ -500,7 +497,7 @@ map.addControl(bottomAttribution);
 
 var attributionList = document.createElement('li');
 attributionList.innerHTML = `
-	<a href="https://github.com/tomchadwin/qgis2web">qgis2web</a> &middot;
+	<a href="https://github.com/qgis2web/qgis2web">qgis2web</a> &middot;
 	<a href="https://openlayers.org/">OpenLayers</a> &middot;
 	<a href="https://qgis.org/">QGIS</a>	
 `;

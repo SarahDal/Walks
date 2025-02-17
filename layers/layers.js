@@ -33,7 +33,7 @@ var lyr_Walks_2 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Walks_2, 
                 style: style_Walks_2,
-                popuplayertitle: "Walks",
+                popuplayertitle: 'Walks',
                 interactive: true,
     title: 'Walks<br />\
     <img src="styles/legend/Walks_2_0.png" /> up to 10 km<br />\
@@ -53,7 +53,7 @@ var lyr_SomeThingsofInterest_3 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_SomeThingsofInterest_3, 
                 style: style_SomeThingsofInterest_3,
-                popuplayertitle: "Some Things of Interest",
+                popuplayertitle: 'Some Things of Interest',
                 interactive: true,
     title: 'Some Things of Interest<br />\
     <img src="styles/legend/SomeThingsofInterest_3_0.png" /> Building<br />\
@@ -64,7 +64,9 @@ var lyr_SomeThingsofInterest_3 = new ol.layer.Vector({
     <img src="styles/legend/SomeThingsofInterest_3_5.png" /> Ruin<br />\
     <img src="styles/legend/SomeThingsofInterest_3_6.png" /> Unknown<br />\
     <img src="styles/legend/SomeThingsofInterest_3_7.png" /> Boundary Stone<br />\
-    <img src="styles/legend/SomeThingsofInterest_3_8.png" /> Cup And Ring Marked Rock<br />'
+    <img src="styles/legend/SomeThingsofInterest_3_8.png" /> Cup And Ring Marked Rock<br />\
+    <img src="styles/legend/SomeThingsofInterest_3_9.png" /> Stone Circle<br />\
+    <img src="styles/legend/SomeThingsofInterest_3_10.png" /> <br />'
         });
 
 lyr_ThunderforestOutdoors_0.setVisible(false);lyr_ThunderforestLandscape_1.setVisible(true);lyr_Walks_2.setVisible(true);lyr_SomeThingsofInterest_3.setVisible(true);
