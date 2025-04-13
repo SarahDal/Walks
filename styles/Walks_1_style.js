@@ -7,11 +7,12 @@ var style_Walks_1 = function(feature, resolution){
         variables: {}
     };
     
-    var labelText = ""; var value = feature.get("Length");
+    var labelText = ""; 
+    var value = feature.get("Length");
     var labelFont = "13.0px \'Open Sans\', sans-serif";
     var labelFill = "#323232";
     var bufferColor = "#fafafa";
-    var bufferWidth = 1.0;
+    var bufferWidth = 3.0;
     var textAlign = "left";
     var offsetX = 0;
     var offsetY = 0;

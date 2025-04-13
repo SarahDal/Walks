@@ -101,7 +101,8 @@ var style_POI_3 = function(feature, resolution){
         variables: {}
     };
     
-    var labelText = ""; var value = feature.get("Type");
+    var labelText = ""; 
+    var value = feature.get("Type");
     var labelFont = "10px, sans-serif";
     var labelFill = "#000000";
     var bufferColor = "";
