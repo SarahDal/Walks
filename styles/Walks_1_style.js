@@ -20,7 +20,7 @@ var style_Walks_1 = function(feature, resolution){
     if ("" !== null) {
         labelText = String("");
     }
-    if (value >= 0.000000 && value <= 10.000000) {
+    if (value >= 0.000000 && value <= 8.000000) {
             style = [ new ol.style.Style({
         stroke: new ol.style.Stroke({color: 'rgba(253,231,37,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.9}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
@@ -32,43 +32,55 @@ var style_Walks_1 = function(feature, resolution){
                               labelFill, placement, bufferColor,
                               bufferWidth)
     })]
-                    } else if (value >= 10.000000 && value <= 15.000000) {
+                    } else if (value >= 8.000000 && value <= 10.000000) {
             style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(93,201,99,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.9}),
+        stroke: new ol.style.Stroke({color: 'rgba(122,209,81,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.9}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
     }),new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(93,201,99,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3.8}),
+        stroke: new ol.style.Stroke({color: 'rgba(122,209,81,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3.8}),
+        text: createTextStyle(feature, resolution, labelText, labelFont,
+                              labelFill, placement, bufferColor,
+                              bufferWidth)
+    })]
+                    } else if (value >= 10.000000 && value <= 15.000000) {
+            style = [ new ol.style.Style({
+        stroke: new ol.style.Stroke({color: 'rgba(35,168,132,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.9}),
+        text: createTextStyle(feature, resolution, labelText, labelFont,
+                              labelFill, placement, bufferColor,
+                              bufferWidth)
+    }),new ol.style.Style({
+        stroke: new ol.style.Stroke({color: 'rgba(35,168,132,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3.8}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
     })]
                     } else if (value >= 15.000000 && value <= 20.000000) {
             style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(33,144,141,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.9}),
+        stroke: new ol.style.Stroke({color: 'rgba(42,120,142,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.9}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
     }),new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(33,144,141,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3.8}),
+        stroke: new ol.style.Stroke({color: 'rgba(42,120,142,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3.8}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
     })]
                     } else if (value >= 20.000000 && value <= 25.000000) {
             style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(59,82,139,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.9}),
+        stroke: new ol.style.Stroke({color: 'rgba(65,67,135,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.9}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
     }),new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(59,82,139,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3.8}),
+        stroke: new ol.style.Stroke({color: 'rgba(65,67,135,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3.8}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
     })]
-                    } else if (value >= 25.000000 && value <= 62.090000) {
+                    } else if (value >= 25.000000 && value <= 62.094747) {
             style = [ new ol.style.Style({
         stroke: new ol.style.Stroke({color: 'rgba(68,1,84,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.9}),
         text: createTextStyle(feature, resolution, labelText, labelFont,

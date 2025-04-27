@@ -1,13 +1,14 @@
 var size = 0;
 var placement = 'point';
 
-var style_NorthumberlandNamedStones_4 = function(feature, resolution){
+var style_NorthumberlandNamedStones_3 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
     };
     
-    var labelText = ""; var value = feature.get("");
+    var labelText = ""; 
+    var value = feature.get("");
     var labelFont = "10px, sans-serif";
     var labelFill = "#000000";
     var bufferColor = "";
