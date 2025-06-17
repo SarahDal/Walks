@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-238868.170101, 7392720.714599, -208829.804990, 7411268.697237], map.getSize());
+map.getView().fit([-409214.213457, 7344206.970013, -64476.678764, 7560486.926680], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -466,7 +466,7 @@ var Abstract = new ol.control.Control({
 
         var linkElement = document.createElement('a');
 
-        if (682 > 240) {
+        if (715 > 240) {
             linkElement.setAttribute("onmouseenter", "showAbstract()");
             linkElement.setAttribute("onmouseleave", "hideAbstract()");
             linkElement.innerHTML = 'i';
@@ -480,13 +480,13 @@ var Abstract = new ol.control.Control({
             window.showAbstract = function() {
                 linkElement.classList.remove("project-abstract");
                 linkElement.classList.add("project-abstract-uncollapsed");
-                linkElement.innerHTML = 'My collected information about Northumberland<br /><br />Named Stones are a list published in the History of the Berwickshire Naturalists Club 1879-1881 by G.A. Lebour. More info <a href="https://heddonhistory.weebly.com/blog/the-named-stones-of-northumberland-revisited">here</a>.<br /><br />The Rockart Panels are taken from the Bekensall Archive. Many of these will no longer exist.<br /><br />Points of Interest are things I\'ve found, either from reading about them, looking at maps, or things I\'ve found while out walking.<br /><br />The Walks are waks I\'ve enjoyed over the years. Many of these don\'t follow paths as I enjoy going to look at out-of-the-way places. They may be very difficult or impossible to follow.';
+                linkElement.innerHTML = 'A Map of walks I have done, and my collected information about Northumberland.<br /><br />Named Stones are a list published in the History of the Berwickshire Naturalists Club 1879-1881 by G.A. Lebour. More info <a href="https://heddonhistory.weebly.com/blog/the-named-stones-of-northumberland-revisited">here</a>.<br /><br />The Rockart Panels are taken from the Bekensall Archive. Many of these will no longer exist.<br /><br />Points of Interest are things I\'ve found, either from reading about them, looking at maps, or things I\'ve found while out walking.<br /><br />The Walks are waks I\'ve enjoyed over the years. Many of these don\'t follow paths as I enjoy going to look at out-of-the-way places. They may be very difficult or impossible to follow.';
             }
 
             hideAbstract();
         } else {
             linkElement.classList.add("project-abstract-uncollapsed");
-            linkElement.innerHTML = 'My collected information about Northumberland<br /><br />Named Stones are a list published in the History of the Berwickshire Naturalists Club 1879-1881 by G.A. Lebour. More info <a href="https://heddonhistory.weebly.com/blog/the-named-stones-of-northumberland-revisited">here</a>.<br /><br />The Rockart Panels are taken from the Bekensall Archive. Many of these will no longer exist.<br /><br />Points of Interest are things I\'ve found, either from reading about them, looking at maps, or things I\'ve found while out walking.<br /><br />The Walks are waks I\'ve enjoyed over the years. Many of these don\'t follow paths as I enjoy going to look at out-of-the-way places. They may be very difficult or impossible to follow.';
+            linkElement.innerHTML = 'A Map of walks I have done, and my collected information about Northumberland.<br /><br />Named Stones are a list published in the History of the Berwickshire Naturalists Club 1879-1881 by G.A. Lebour. More info <a href="https://heddonhistory.weebly.com/blog/the-named-stones-of-northumberland-revisited">here</a>.<br /><br />The Rockart Panels are taken from the Bekensall Archive. Many of these will no longer exist.<br /><br />Points of Interest are things I\'ve found, either from reading about them, looking at maps, or things I\'ve found while out walking.<br /><br />The Walks are waks I\'ve enjoyed over the years. Many of these don\'t follow paths as I enjoy going to look at out-of-the-way places. They may be very difficult or impossible to follow.';
         }
 
         titleElement.appendChild(linkElement);
