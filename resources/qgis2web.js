@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-461603.669642, 7330144.002941, -124737.954069, 7583463.257728], map.getSize());
+map.getView().fit([-360666.577417, 7324709.546223, -131050.104263, 7521453.778626], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -669,9 +669,9 @@ document.addEventListener('DOMContentLoaded', function() {
         topLeftContainerDiv.appendChild(measureControl);
     }
     //geocoder
-    var geocoderControl = document.getElementsByClassName('ol-geocoder')[0];
-    if (geocoderControl) {
-        topLeftContainerDiv.appendChild(geocoderControl);
+    var searchbar = document.getElementsByClassName('photon-geocoder-autocomplete ol-unselectable ol-control')[0];
+    if (searchbar) {
+        topLeftContainerDiv.appendChild(searchbar);
     }
     //search layer
     var searchLayerControl = document.getElementsByClassName('search-layer')[0];
