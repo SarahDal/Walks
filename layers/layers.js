@@ -88,7 +88,7 @@ var lyr_NorthumberlandNamedStones_4 = new ol.layer.Vector({
                 title: '<img src="styles/legend/NorthumberlandNamedStones_4.png" /> Northumberland Named Stones'
             });
 
-lyr_ThunderforestLandscape_0.setVisible(true);lyr_Walks_1.setVisible(true);lyr_RockartPanels_2.setVisible(true);lyr_POI_3.setVisible(true);lyr_NorthumberlandNamedStones_4.setVisible(true);
+lyr_ThunderforestLandscape_0.setVisible(true);lyr_Walks_1.setVisible(true);lyr_RockartPanels_2.setVisible(false);lyr_POI_3.setVisible(true);lyr_NorthumberlandNamedStones_4.setVisible(false);
 var layersList = [lyr_ThunderforestLandscape_0,lyr_Walks_1,lyr_RockartPanels_2,lyr_POI_3,lyr_NorthumberlandNamedStones_4];
 lyr_Walks_1.set('fieldAliases', {'fid': 'fid', 'FileName': 'Walk Name', 'Length': 'Length (km)', 'link': 'link', 'Date Walked': 'Date Walked', 'Notes': 'Notes', });
 lyr_RockartPanels_2.set('fieldAliases', {'fid': 'fid', 'name': 'name', 'OSGB_TILE': 'OSGB_TILE', 'OSGB_X': 'OSGB_X', 'OSGB_Y': 'OSGB_Y', 'cmt': 'cmt', });
