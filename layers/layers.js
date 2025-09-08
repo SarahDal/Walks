@@ -111,7 +111,7 @@ var lyr_NorthumberlandNamedStones_6 = new ol.layer.Vector({
                 title: '<img src="styles/legend/NorthumberlandNamedStones_6.png" /> Northumberland Named Stones'
             });
 
-lyr_ThunderforestOutdoors_0.setVisible(true);lyr_BingAerial_1.setVisible(false);lyr_ThunderforestLandscape_2.setVisible(true);lyr_Walks_3.setVisible(true);lyr_RockartPanels_4.setVisible(false);lyr_POI_5.setVisible(false);lyr_NorthumberlandNamedStones_6.setVisible(false);
+lyr_ThunderforestOutdoors_0.setVisible(false);lyr_BingAerial_1.setVisible(false);lyr_ThunderforestLandscape_2.setVisible(true);lyr_Walks_3.setVisible(true);lyr_RockartPanels_4.setVisible(false);lyr_POI_5.setVisible(false);lyr_NorthumberlandNamedStones_6.setVisible(false);
 var layersList = [lyr_ThunderforestOutdoors_0,lyr_BingAerial_1,lyr_ThunderforestLandscape_2,lyr_Walks_3,lyr_RockartPanels_4,lyr_POI_5,lyr_NorthumberlandNamedStones_6];
 lyr_Walks_3.set('fieldAliases', {'fid': 'fid', 'FileName': 'Walk Name', 'Length': 'Length (km)', 'link': 'link', 'Date Walked': 'Date Walked', 'Notes': 'Notes', });
 lyr_RockartPanels_4.set('fieldAliases', {'fid': 'fid', 'name': 'name', 'OSGB_TILE': 'OSGB_TILE', 'OSGB_X': 'OSGB_X', 'OSGB_Y': 'OSGB_Y', 'cmt': 'cmt', });
