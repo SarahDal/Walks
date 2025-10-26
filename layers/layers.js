@@ -43,42 +43,78 @@ var lyr_Walks_2 = new ol.layer.Vector({
     <img src="styles/legend/Walks_2_4.png" /> 20 - 25 km<br />\
     <img src="styles/legend/Walks_2_5.png" /> 25 - 50 km<br />\
     <img src="styles/legend/Walks_2_6.png" /> 50 + km<br />' });
-var format_POI_3 = new ol.format.GeoJSON();
-var features_POI_3 = format_POI_3.readFeatures(json_POI_3, 
+var format_RockartPanels_3 = new ol.format.GeoJSON();
+var features_RockartPanels_3 = format_RockartPanels_3.readFeatures(json_RockartPanels_3, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_POI_3 = new ol.source.Vector({
+var jsonSource_RockartPanels_3 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_POI_3.addFeatures(features_POI_3);
-var lyr_POI_3 = new ol.layer.Vector({
+jsonSource_RockartPanels_3.addFeatures(features_RockartPanels_3);
+var lyr_RockartPanels_3 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_POI_3, 
-                style: style_POI_3,
+                source:jsonSource_RockartPanels_3, 
+                style: style_RockartPanels_3,
+                popuplayertitle: 'Rockart Panels',
+                interactive: true,
+                title: '<img src="styles/legend/RockartPanels_3.png" /> Rockart Panels'
+            });
+var format_POI_4 = new ol.format.GeoJSON();
+var features_POI_4 = format_POI_4.readFeatures(json_POI_4, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_POI_4 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_POI_4.addFeatures(features_POI_4);
+var lyr_POI_4 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_POI_4, 
+                style: style_POI_4,
                 popuplayertitle: 'POI',
                 interactive: true,
     title: 'POI<br />\
-    <img src="styles/legend/POI_3_0.png" /> Building<br />\
-    <img src="styles/legend/POI_3_1.png" /> Chalybeate spring <br />\
-    <img src="styles/legend/POI_3_2.png" /> Cup and Ring Marked Rock<br />\
-    <img src="styles/legend/POI_3_3.png" /> Earthworks<br />\
-    <img src="styles/legend/POI_3_4.png" /> Memorial<br />\
-    <img src="styles/legend/POI_3_5.png" /> Nothing<br />\
-    <img src="styles/legend/POI_3_6.png" /> Other<br />\
-    <img src="styles/legend/POI_3_7.png" /> Plane Wreck<br />\
-    <img src="styles/legend/POI_3_8.png" /> Ruin<br />\
-    <img src="styles/legend/POI_3_9.png" /> Stone<br />\
-    <img src="styles/legend/POI_3_10.png" /> Unknown<br />\
-    <img src="styles/legend/POI_3_11.png" /> Well or Spring<br />\
-    <img src="styles/legend/POI_3_12.png" /> <br />' });
+    <img src="styles/legend/POI_4_0.png" /> Building<br />\
+    <img src="styles/legend/POI_4_1.png" /> Chalybeate spring <br />\
+    <img src="styles/legend/POI_4_2.png" /> Cup and Ring Marked Rock<br />\
+    <img src="styles/legend/POI_4_3.png" /> Earthworks<br />\
+    <img src="styles/legend/POI_4_4.png" /> Memorial<br />\
+    <img src="styles/legend/POI_4_5.png" /> Nothing<br />\
+    <img src="styles/legend/POI_4_6.png" /> Other<br />\
+    <img src="styles/legend/POI_4_7.png" /> Plane Wreck<br />\
+    <img src="styles/legend/POI_4_8.png" /> Ruin<br />\
+    <img src="styles/legend/POI_4_9.png" /> Stone<br />\
+    <img src="styles/legend/POI_4_10.png" /> Unknown<br />\
+    <img src="styles/legend/POI_4_11.png" /> Well or Spring<br />\
+    <img src="styles/legend/POI_4_12.png" /> <br />' });
+var format_NorthumberlandNamedStones_5 = new ol.format.GeoJSON();
+var features_NorthumberlandNamedStones_5 = format_NorthumberlandNamedStones_5.readFeatures(json_NorthumberlandNamedStones_5, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_NorthumberlandNamedStones_5 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_NorthumberlandNamedStones_5.addFeatures(features_NorthumberlandNamedStones_5);
+var lyr_NorthumberlandNamedStones_5 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_NorthumberlandNamedStones_5, 
+                style: style_NorthumberlandNamedStones_5,
+                popuplayertitle: 'Northumberland Named Stones',
+                interactive: true,
+                title: '<img src="styles/legend/NorthumberlandNamedStones_5.png" /> Northumberland Named Stones'
+            });
 
-lyr_BingAerial_0.setVisible(false);lyr_ThunderforestLandscape_1.setVisible(true);lyr_Walks_2.setVisible(true);lyr_POI_3.setVisible(true);
-var layersList = [lyr_BingAerial_0,lyr_ThunderforestLandscape_1,lyr_Walks_2,lyr_POI_3];
+lyr_BingAerial_0.setVisible(false);lyr_ThunderforestLandscape_1.setVisible(true);lyr_Walks_2.setVisible(true);lyr_RockartPanels_3.setVisible(false);lyr_POI_4.setVisible(true);lyr_NorthumberlandNamedStones_5.setVisible(true);
+var layersList = [lyr_BingAerial_0,lyr_ThunderforestLandscape_1,lyr_Walks_2,lyr_RockartPanels_3,lyr_POI_4,lyr_NorthumberlandNamedStones_5];
 lyr_Walks_2.set('fieldAliases', {'fid': 'fid', 'FileName': 'Walk Name', 'Length': 'Length (km)', 'link': 'link', 'Date Walked': 'Date Walked', 'Notes': 'Notes', 'name': 'name', });
-lyr_POI_3.set('fieldAliases', {'fid': 'fid', 'Name': 'Name', 'Type': 'Type', 'Link': 'Link', 'Description': 'Description', });
+lyr_RockartPanels_3.set('fieldAliases', {'fid': 'fid', 'name': 'name', 'OSGB_TILE': 'OSGB_TILE', 'OSGB_X': 'OSGB_X', 'OSGB_Y': 'OSGB_Y', 'cmt': 'cmt', });
+lyr_POI_4.set('fieldAliases', {'fid': 'fid', 'Name': 'Name', 'Type': 'Type', 'Link': 'Link', 'Description': 'Description', });
+lyr_NorthumberlandNamedStones_5.set('fieldAliases', {'fid': 'fid', 'Name': 'Name', 'description': 'description', 'Image': 'Image', 'alias': 'alias', });
 lyr_Walks_2.set('fieldImages', {'fid': 'TextEdit', 'FileName': 'TextEdit', 'Length': 'TextEdit', 'link': 'TextEdit', 'Date Walked': 'DateTime', 'Notes': 'TextEdit', 'name': '', });
-lyr_POI_3.set('fieldImages', {'fid': 'TextEdit', 'Name': 'TextEdit', 'Type': 'TextEdit', 'Link': 'TextEdit', 'Description': 'TextEdit', });
+lyr_RockartPanels_3.set('fieldImages', {'fid': 'TextEdit', 'name': 'TextEdit', 'OSGB_TILE': 'TextEdit', 'OSGB_X': 'TextEdit', 'OSGB_Y': 'TextEdit', 'cmt': 'TextEdit', });
+lyr_POI_4.set('fieldImages', {'fid': 'TextEdit', 'Name': 'TextEdit', 'Type': 'TextEdit', 'Link': 'TextEdit', 'Description': 'TextEdit', });
+lyr_NorthumberlandNamedStones_5.set('fieldImages', {'fid': 'TextEdit', 'Name': 'TextEdit', 'description': 'TextEdit', 'Image': 'ExternalResource', 'alias': 'TextEdit', });
 lyr_Walks_2.set('fieldLabels', {'fid': 'hidden field', 'FileName': 'inline label - always visible', 'Length': 'inline label - always visible', 'link': 'no label', 'Date Walked': 'inline label - always visible', 'Notes': 'no label', 'name': 'no label', });
-lyr_POI_3.set('fieldLabels', {'fid': 'no label', 'Name': 'no label', 'Type': 'no label', 'Link': 'no label', 'Description': 'no label', });
-lyr_POI_3.on('precompose', function(evt) {
+lyr_RockartPanels_3.set('fieldLabels', {'fid': 'no label', 'name': 'no label', 'OSGB_TILE': 'hidden field', 'OSGB_X': 'hidden field', 'OSGB_Y': 'hidden field', 'cmt': 'no label', });
+lyr_POI_4.set('fieldLabels', {'fid': 'no label', 'Name': 'no label', 'Type': 'no label', 'Link': 'no label', 'Description': 'no label', });
+lyr_NorthumberlandNamedStones_5.set('fieldLabels', {'fid': 'hidden field', 'Name': 'inline label - always visible', 'description': 'inline label - visible with data', 'Image': 'no label', 'alias': 'no label', });
+lyr_NorthumberlandNamedStones_5.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });

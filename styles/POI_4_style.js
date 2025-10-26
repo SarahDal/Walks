@@ -112,7 +112,7 @@ case 'Well or Spring':
                               bufferWidth)
     })];
                     break;
-default:
+case 'NULL':
                     return [ new ol.style.Style({
         image: new ol.style.Circle({radius: 4.0 + size,
             displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(159,200,47,1.0)'})}),
