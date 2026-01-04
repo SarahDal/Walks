@@ -9,33 +9,10 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-536384.263150, 7246115.468599, 99351.900919, 7577795.902884], map.getSize());
+map.getView().fit([-671726.241859, 7264048.625552, -4498.133831, 7637710.396654], map.getSize());
 
 //full zooms only
 map.getView().setProperties({constrainResolution: true});
-
-//change cursor
-function pointerOnFeature(evt) {
-    if (evt.dragging) {
-        return;
-    }
-    var hasFeature = map.hasFeatureAtPixel(evt.pixel, {
-        layerFilter: function(layer) {
-            return layer && (layer.get("interactive"));
-        }
-    });
-    map.getViewport().style.cursor = hasFeature ? "pointer" : "";
-}
-map.on('pointermove', pointerOnFeature);
-function styleCursorMove() {
-    map.on('pointerdrag', function() {
-        map.getViewport().style.cursor = "move";
-    });
-    map.on('pointerup', function() {
-        map.getViewport().style.cursor = "default";
-    });
-}
-styleCursorMove();
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -291,7 +268,7 @@ function onPointerMove(evt) {
                     highlightStyle = new ol.style.Style({
                         image: new ol.style.Circle({
                             fill: new ol.style.Fill({
-                                color: "rgba(255, 193, 7, 1.00)"
+                                color: "#ffc107"
                             }),
                             radius: radius
                         })
@@ -302,7 +279,7 @@ function onPointerMove(evt) {
 
                     highlightStyle = new ol.style.Style({
                         stroke: new ol.style.Stroke({
-                            color: 'rgba(255, 193, 7, 1.00)',
+                            color: '#ffc107',
                             lineDash: null,
                             width: featureWidth
                         })
@@ -311,7 +288,7 @@ function onPointerMove(evt) {
                 } else {
                     highlightStyle = new ol.style.Style({
                         fill: new ol.style.Fill({
-                            color: 'rgba(255, 193, 7, 1.00)'
+                            color: '#ffc107'
                         })
                     })
                 }
@@ -489,7 +466,6 @@ map.on('singleclick', onSingleClickWMS);
 //get container
 var topLeftContainerDiv = document.getElementById('top-left-container')
 var bottomLeftContainerDiv = document.getElementById('bottom-left-container')
-var topRightContainerDiv = document.getElementById('top-right-container')
 var bottomRightContainerDiv = document.getElementById('bottom-right-container')
 
 //title
