@@ -515,7 +515,7 @@ var Abstract = new ol.control.Control({
 
         var linkElement = document.createElement('a');
 
-        if (715 > 240) {
+        if (486 > 240) {
             linkElement.setAttribute("onmouseenter", "showAbstract()");
             linkElement.setAttribute("onmouseleave", "hideAbstract()");
             linkElement.innerHTML = 'i';
@@ -529,13 +529,13 @@ var Abstract = new ol.control.Control({
             window.showAbstract = function() {
                 linkElement.classList.remove("project-abstract");
                 linkElement.classList.add("project-abstract-uncollapsed");
-                linkElement.innerHTML = 'A Map of walks I have done, and my collected information about Northumberland.<br /><br />Named Stones are a list published in the History of the Berwickshire Naturalists Club 1879-1881 by G.A. Lebour. More info <a href="https://heddonhistory.weebly.com/blog/the-named-stones-of-northumberland-revisited">here</a>.<br /><br />The Rockart Panels are taken from the Bekensall Archive. Many of these will no longer exist.<br /><br />Points of Interest are things I\'ve found, either from reading about them, looking at maps, or things I\'ve found while out walking.<br /><br />The Walks are waks I\'ve enjoyed over the years. Many of these don\'t follow paths as I enjoy going to look at out-of-the-way places. They may be very difficult or impossible to follow.';
+                linkElement.innerHTML = 'A Map of walks I have done, and my collected information about Northumberland.<br /><br />Named Stones are a list published in the History of the Berwickshire Naturalists Club 1879-1881 by G.A. Lebour. More info <a href="https://heddonhistory.weebly.com/blog/the-named-stones-of-northumberland-revisited">here</a>.<br /><br />Points of Interest are things I\'ve found, either from reading about them, looking at maps, or things I\'ve found while out walking.<br /><br />The Walks are walks I\'ve enjoyed over the years.';
             }
 
             hideAbstract();
         } else {
             linkElement.classList.add("project-abstract-uncollapsed");
-            linkElement.innerHTML = 'A Map of walks I have done, and my collected information about Northumberland.<br /><br />Named Stones are a list published in the History of the Berwickshire Naturalists Club 1879-1881 by G.A. Lebour. More info <a href="https://heddonhistory.weebly.com/blog/the-named-stones-of-northumberland-revisited">here</a>.<br /><br />The Rockart Panels are taken from the Bekensall Archive. Many of these will no longer exist.<br /><br />Points of Interest are things I\'ve found, either from reading about them, looking at maps, or things I\'ve found while out walking.<br /><br />The Walks are waks I\'ve enjoyed over the years. Many of these don\'t follow paths as I enjoy going to look at out-of-the-way places. They may be very difficult or impossible to follow.';
+            linkElement.innerHTML = 'A Map of walks I have done, and my collected information about Northumberland.<br /><br />Named Stones are a list published in the History of the Berwickshire Naturalists Club 1879-1881 by G.A. Lebour. More info <a href="https://heddonhistory.weebly.com/blog/the-named-stones-of-northumberland-revisited">here</a>.<br /><br />Points of Interest are things I\'ve found, either from reading about them, looking at maps, or things I\'ve found while out walking.<br /><br />The Walks are walks I\'ve enjoyed over the years.';
         }
 
         titleElement.appendChild(linkElement);
