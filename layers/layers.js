@@ -12,14 +12,14 @@ var wms_layers = [];
             })
         });
 
-        var lyr_ThunderforestLandscape_1 = new ol.layer.Tile({
-            'title': 'Thunderforest Landscape',
+        var lyr_ThunderforestOutdoors_1 = new ol.layer.Tile({
+            'title': 'Thunderforest Outdoors',
             'opacity': 1.000000,
             
             
             source: new ol.source.XYZ({
             attributions: ' ',
-                url: 'https://tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=a17c8af5748d4df29e796b6c5dd78826'
+                url: 'https://tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=a17c8af5748d4df29e796b6c5dd78826'
             })
         });
 var format_NorthumberlandNamedStones_2 = new ol.format.GeoJSON();
@@ -86,8 +86,8 @@ var lyr_POI_4 = new ol.layer.Vector({
     <img src="styles/legend/POI_4_11.png" /> Well or Spring<br />\
     <img src="styles/legend/POI_4_12.png" /> <br />' });
 
-lyr_BingAerial_0.setVisible(false);lyr_ThunderforestLandscape_1.setVisible(true);lyr_NorthumberlandNamedStones_2.setVisible(false);lyr_Walks_3.setVisible(true);lyr_POI_4.setVisible(true);
-var layersList = [lyr_BingAerial_0,lyr_ThunderforestLandscape_1,lyr_NorthumberlandNamedStones_2,lyr_Walks_3,lyr_POI_4];
+lyr_BingAerial_0.setVisible(false);lyr_ThunderforestOutdoors_1.setVisible(true);lyr_NorthumberlandNamedStones_2.setVisible(false);lyr_Walks_3.setVisible(true);lyr_POI_4.setVisible(true);
+var layersList = [lyr_BingAerial_0,lyr_ThunderforestOutdoors_1,lyr_NorthumberlandNamedStones_2,lyr_Walks_3,lyr_POI_4];
 lyr_NorthumberlandNamedStones_2.set('fieldAliases', {'fid': 'fid', 'Name': 'Name', 'description': 'description', 'Image': 'Image', 'alias': 'alias', });
 lyr_Walks_3.set('fieldAliases', {'fid': 'fid', 'FileName': 'Walk Name', 'Length': 'Length (km)', 'link': 'link', 'Date Walked': 'Date Walked', 'Notes': 'Notes', 'name': 'name', });
 lyr_POI_4.set('fieldAliases', {'fid': 'fid', 'Name': 'Name', 'Type': 'Type', 'Link': 'Link', 'Description': 'Description', });
