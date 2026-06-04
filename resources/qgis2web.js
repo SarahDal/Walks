@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-333071.078939, 7381221.089686, -144361.202940, 7476277.203845], map.getSize());
+map.getView().fit([-331085.758134, 7318668.507857, -127401.383882, 7509173.347182], map.getSize());
 
 //full zooms only
 map.getView().setProperties({constrainResolution: true});
@@ -148,7 +148,7 @@ var featureOverlay = new ol.layer.Vector({
 });
 
 var doHighlight = true;
-var doHover = false;
+var doHover = true;
 
 function createPopupField(currentFeature, currentFeatureKeys, layer) {
     var popupText = '';
@@ -291,7 +291,7 @@ function onPointerMove(evt) {
                     highlightStyle = new ol.style.Style({
                         image: new ol.style.Circle({
                             fill: new ol.style.Fill({
-                                color: "rgba(255, 193, 7, 1.00)"
+                                color: "rgba(255, 255, 0, 1.00)"
                             }),
                             radius: radius
                         })
@@ -302,7 +302,7 @@ function onPointerMove(evt) {
 
                     highlightStyle = new ol.style.Style({
                         stroke: new ol.style.Stroke({
-                            color: 'rgba(255, 193, 7, 1.00)',
+                            color: 'rgba(255, 255, 0, 1.00)',
                             lineDash: null,
                             width: featureWidth
                         })
@@ -311,7 +311,7 @@ function onPointerMove(evt) {
                 } else {
                     highlightStyle = new ol.style.Style({
                         fill: new ol.style.Fill({
-                            color: 'rgba(255, 193, 7, 1.00)'
+                            color: 'rgba(255, 255, 0, 1.00)'
                         })
                     })
                 }
@@ -498,7 +498,7 @@ var Title = new ol.control.Control({
     element: (() => {
         var titleElement = document.createElement('div');
         titleElement.className = 'top-left-title ol-control';
-        titleElement.innerHTML = '<h2 class="project-title">Northumberland Walks</h2>';
+        titleElement.innerHTML = '<h2 class="project-title">Walks and Points of Interest</h2>';
         return titleElement;
     })(),
     target: 'top-left-container'
@@ -515,7 +515,7 @@ var Abstract = new ol.control.Control({
 
         var linkElement = document.createElement('a');
 
-        if (486 > 240) {
+        if (197 > 240) {
             linkElement.setAttribute("onmouseenter", "showAbstract()");
             linkElement.setAttribute("onmouseleave", "hideAbstract()");
             linkElement.innerHTML = 'i';
@@ -529,13 +529,13 @@ var Abstract = new ol.control.Control({
             window.showAbstract = function() {
                 linkElement.classList.remove("project-abstract");
                 linkElement.classList.add("project-abstract-uncollapsed");
-                linkElement.innerHTML = 'A Map of walks I have done, and my collected information about Northumberland.<br /><br />Named Stones are a list published in the History of the Berwickshire Naturalists Club 1879-1881 by G.A. Lebour. More info <a href="https://heddonhistory.weebly.com/blog/the-named-stones-of-northumberland-revisited">here</a>.<br /><br />Points of Interest are things I\'ve found, either from reading about them, looking at maps, or things I\'ve found while out walking.<br /><br />The Walks are walks I\'ve enjoyed over the years.';
+                linkElement.innerHTML = 'A map to keep record of all the walks I go on, coloured by length. Also included are interesting things I\'ve found, and a list of Named Stones Of Northumberland as published in 1881 by G.A. Lebour.';
             }
 
             hideAbstract();
         } else {
             linkElement.classList.add("project-abstract-uncollapsed");
-            linkElement.innerHTML = 'A Map of walks I have done, and my collected information about Northumberland.<br /><br />Named Stones are a list published in the History of the Berwickshire Naturalists Club 1879-1881 by G.A. Lebour. More info <a href="https://heddonhistory.weebly.com/blog/the-named-stones-of-northumberland-revisited">here</a>.<br /><br />Points of Interest are things I\'ve found, either from reading about them, looking at maps, or things I\'ve found while out walking.<br /><br />The Walks are walks I\'ve enjoyed over the years.';
+            linkElement.innerHTML = 'A map to keep record of all the walks I go on, coloured by length. Also included are interesting things I\'ve found, and a list of Named Stones Of Northumberland as published in 1881 by G.A. Lebour.';
         }
 
         titleElement.appendChild(linkElement);
@@ -548,65 +548,6 @@ map.addControl(Abstract);
 
 //geolocate
 
-	let isTracking = false;
-
-	const geolocateButton = document.createElement('button');
-	geolocateButton.className = 'geolocate-button fa fa-map-marker';
-	geolocateButton.title = 'Geolocalizza';
-
-	const geolocateControl = document.createElement('div');
-	geolocateControl.className = 'ol-unselectable ol-control geolocate';
-	geolocateControl.appendChild(geolocateButton);
-	map.getTargetElement().appendChild(geolocateControl);
-
-	const accuracyFeature = new ol.Feature();
-	const positionFeature = new ol.Feature({
-	  style: new ol.style.Style({
-		image: new ol.style.Circle({
-		  radius: 6,
-		  fill: new ol.style.Fill({ color: '#3399CC' }),
-		  stroke: new ol.style.Stroke({ color: '#fff', width: 2 }),
-		}),
-	  }),
-	});
-
-  const geolocateOverlay = new ol.layer.Vector({
-	  source: new ol.source.Vector({
-		features: [accuracyFeature, positionFeature],
-	  }),
-	});
-	
-	const geolocation = new ol.Geolocation({
-	  projection: map.getView().getProjection(),
-	});
-
-	geolocation.on('change:accuracyGeometry', function () {
-	  accuracyFeature.setGeometry(geolocation.getAccuracyGeometry());
-	});
-
-	geolocation.on('change:position', function () {
-	  const coords = geolocation.getPosition();
-	  positionFeature.setGeometry(coords ? new ol.geom.Point(coords) : null);
-	});
-
-	geolocation.setTracking(true);
-
-	function handleGeolocate() {
-	  if (isTracking) {
-		map.removeLayer(geolocateOverlay);
-		isTracking = false;
-	  } else if (geolocation.getTracking()) {
-		map.addLayer(geolocateOverlay);
-		const pos = geolocation.getPosition();
-		if (pos) {
-		  map.getView().setCenter(pos);
-		}
-		isTracking = true;
-	  }
-	}
-
-	geolocateButton.addEventListener('click', handleGeolocate);
-	geolocateButton.addEventListener('touchstart', handleGeolocate);
 
 
 //measurement
