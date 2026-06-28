@@ -77,13 +77,13 @@ var lyr_NorthumberlandNamedStones_3 = new ol.layer.Vector({
 
 lyr_ThunderforestLandscape_0.setVisible(true);lyr_Walks_1.setVisible(true);lyr_POI_2.setVisible(true);lyr_NorthumberlandNamedStones_3.setVisible(true);
 var layersList = [lyr_ThunderforestLandscape_0,lyr_Walks_1,lyr_POI_2,lyr_NorthumberlandNamedStones_3];
-lyr_Walks_1.set('fieldAliases', {'fid': 'fid', 'ID': 'ID', 'FileName': 'FileName', 'Length': 'Length', 'link': 'link', 'Date Walked': 'Date Walked', 'Notes': 'Notes', 'name': 'name', });
+lyr_Walks_1.set('fieldAliases', {'fid': 'fid', 'FileName': 'FileName', 'Length': 'Length', 'link': 'link', 'Date Walked': 'Date Walked', 'Notes': 'Notes', });
 lyr_POI_2.set('fieldAliases', {'fid': 'fid', 'ID': 'ID', 'Name': 'Name', 'Type': 'Type', 'Link': 'Link', 'Description': 'Description', });
 lyr_NorthumberlandNamedStones_3.set('fieldAliases', {'fid': 'fid', 'ID': 'ID', 'Name': 'Name', 'description': 'description', 'Image': 'Image', 'alias': 'alias', });
-lyr_Walks_1.set('fieldImages', {'fid': 'TextEdit', 'ID': 'TextEdit', 'FileName': 'TextEdit', 'Length': 'TextEdit', 'link': 'TextEdit', 'Date Walked': 'DateTime', 'Notes': 'TextEdit', 'name': 'TextEdit', });
+lyr_Walks_1.set('fieldImages', {'fid': 'TextEdit', 'FileName': 'TextEdit', 'Length': 'TextEdit', 'link': 'TextEdit', 'Date Walked': 'DateTime', 'Notes': 'TextEdit', });
 lyr_POI_2.set('fieldImages', {'fid': 'TextEdit', 'ID': 'TextEdit', 'Name': 'TextEdit', 'Type': 'TextEdit', 'Link': 'TextEdit', 'Description': 'TextEdit', });
 lyr_NorthumberlandNamedStones_3.set('fieldImages', {'fid': 'TextEdit', 'ID': 'TextEdit', 'Name': 'TextEdit', 'description': 'TextEdit', 'Image': 'ExternalResource', 'alias': 'TextEdit', });
-lyr_Walks_1.set('fieldLabels', {'fid': 'hidden field', 'ID': 'hidden field', 'FileName': 'no label', 'Length': 'no label', 'link': 'no label', 'Date Walked': 'inline label - always visible', 'Notes': 'no label', 'name': 'no label', });
+lyr_Walks_1.set('fieldLabels', {'fid': 'hidden field', 'FileName': 'no label', 'Length': 'no label', 'link': 'no label', 'Date Walked': 'inline label - always visible', 'Notes': 'no label', });
 lyr_POI_2.set('fieldLabels', {'fid': 'hidden field', 'ID': 'hidden field', 'Name': 'no label', 'Type': 'no label', 'Link': 'no label', 'Description': 'no label', });
 lyr_NorthumberlandNamedStones_3.set('fieldLabels', {'fid': 'hidden field', 'ID': 'hidden field', 'Name': 'no label', 'description': 'no label', 'Image': 'no label', 'alias': 'no label', });
 lyr_NorthumberlandNamedStones_3.on('precompose', function(evt) {
