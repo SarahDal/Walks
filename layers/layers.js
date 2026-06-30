@@ -26,11 +26,12 @@ var lyr_Walks_1 = new ol.layer.Vector({
                 interactive: true,
     title: 'Walks<br />\
     <img src="styles/legend/Walks_1_0.png" /> 0 - 6<br />\
-    <img src="styles/legend/Walks_1_1.png" /> 6 - 12<br />\
-    <img src="styles/legend/Walks_1_2.png" /> 12 - 18<br />\
-    <img src="styles/legend/Walks_1_3.png" /> 18 - 25<br />\
-    <img src="styles/legend/Walks_1_4.png" /> 25 - 36<br />\
-    <img src="styles/legend/Walks_1_5.png" /> 36 - 500<br />' });
+    <img src="styles/legend/Walks_1_1.png" /> 6 - 10<br />\
+    <img src="styles/legend/Walks_1_2.png" /> 10 - 15<br />\
+    <img src="styles/legend/Walks_1_3.png" /> 15 - 20<br />\
+    <img src="styles/legend/Walks_1_4.png" /> 20 - 30<br />\
+    <img src="styles/legend/Walks_1_5.png" /> 30 - 40<br />\
+    <img src="styles/legend/Walks_1_6.png" /> 40 +<br />' });
 var format_POI_2 = new ol.format.GeoJSON();
 var features_POI_2 = format_POI_2.readFeatures(json_POI_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
