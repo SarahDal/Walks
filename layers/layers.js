@@ -32,61 +32,30 @@ var lyr_Walks_1 = new ol.layer.Vector({
     <img src="styles/legend/Walks_1_4.png" /> 20 - 30<br />\
     <img src="styles/legend/Walks_1_5.png" /> 30 - 40<br />\
     <img src="styles/legend/Walks_1_6.png" /> 40 +<br />' });
-var format_POI_2 = new ol.format.GeoJSON();
-var features_POI_2 = format_POI_2.readFeatures(json_POI_2, 
+var format_EnglandScotlandBorder_2 = new ol.format.GeoJSON();
+var features_EnglandScotlandBorder_2 = format_EnglandScotlandBorder_2.readFeatures(json_EnglandScotlandBorder_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_POI_2 = new ol.source.Vector({
+var jsonSource_EnglandScotlandBorder_2 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_POI_2.addFeatures(features_POI_2);
-var lyr_POI_2 = new ol.layer.Vector({
+jsonSource_EnglandScotlandBorder_2.addFeatures(features_EnglandScotlandBorder_2);
+var lyr_EnglandScotlandBorder_2 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_POI_2, 
-                style: style_POI_2,
-                popuplayertitle: 'POI',
-                interactive: true,
-    title: 'POI<br />\
-    <img src="styles/legend/POI_2_0.png" /> Building<br />\
-    <img src="styles/legend/POI_2_1.png" /> Chalybeate spring <br />\
-    <img src="styles/legend/POI_2_2.png" /> Cup and Ring Marked Rock<br />\
-    <img src="styles/legend/POI_2_3.png" /> Earthworks<br />\
-    <img src="styles/legend/POI_2_4.png" /> Memorial<br />\
-    <img src="styles/legend/POI_2_5.png" /> Nothing<br />\
-    <img src="styles/legend/POI_2_6.png" /> Other<br />\
-    <img src="styles/legend/POI_2_7.png" /> Plane Wreck<br />\
-    <img src="styles/legend/POI_2_8.png" /> ruin<br />\
-    <img src="styles/legend/POI_2_9.png" /> Ruin<br />\
-    <img src="styles/legend/POI_2_10.png" /> Stone<br />\
-    <img src="styles/legend/POI_2_11.png" /> Unknown<br />\
-    <img src="styles/legend/POI_2_12.png" /> Well or Spring<br />\
-    <img src="styles/legend/POI_2_13.png" /> <br />' });
-var format_NorthumberlandNamedStones_3 = new ol.format.GeoJSON();
-var features_NorthumberlandNamedStones_3 = format_NorthumberlandNamedStones_3.readFeatures(json_NorthumberlandNamedStones_3, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_NorthumberlandNamedStones_3 = new ol.source.Vector({
-    attributions: ' ',
-});
-jsonSource_NorthumberlandNamedStones_3.addFeatures(features_NorthumberlandNamedStones_3);
-var lyr_NorthumberlandNamedStones_3 = new ol.layer.Vector({
-                declutter: false,
-                source:jsonSource_NorthumberlandNamedStones_3, 
-                style: style_NorthumberlandNamedStones_3,
-                popuplayertitle: 'Northumberland Named Stones',
-                interactive: true,
-                title: '<img src="styles/legend/NorthumberlandNamedStones_3.png" /> Northumberland Named Stones'
+                source:jsonSource_EnglandScotlandBorder_2, 
+                style: style_EnglandScotlandBorder_2,
+                popuplayertitle: 'England-Scotland Border',
+                interactive: false,
+                title: '<img src="styles/legend/EnglandScotlandBorder_2.png" /> England-Scotland Border'
             });
 
-lyr_ThunderforestLandscape_0.setVisible(true);lyr_Walks_1.setVisible(true);lyr_POI_2.setVisible(true);lyr_NorthumberlandNamedStones_3.setVisible(true);
-var layersList = [lyr_ThunderforestLandscape_0,lyr_Walks_1,lyr_POI_2,lyr_NorthumberlandNamedStones_3];
+lyr_ThunderforestLandscape_0.setVisible(true);lyr_Walks_1.setVisible(true);lyr_EnglandScotlandBorder_2.setVisible(true);
+var layersList = [lyr_ThunderforestLandscape_0,lyr_Walks_1,lyr_EnglandScotlandBorder_2];
 lyr_Walks_1.set('fieldAliases', {'fid': 'fid', 'FileName': 'FileName', 'Length': 'Length', 'link': 'link', 'Date Walked': 'Date Walked', 'Notes': 'Notes', });
-lyr_POI_2.set('fieldAliases', {'fid': 'fid', 'ID': 'ID', 'Name': 'Name', 'Type': 'Type', 'Link': 'Link', 'Description': 'Description', });
-lyr_NorthumberlandNamedStones_3.set('fieldAliases', {'fid': 'fid', 'ID': 'ID', 'Name': 'Name', 'description': 'description', 'Image': 'Image', 'alias': 'alias', });
+lyr_EnglandScotlandBorder_2.set('fieldAliases', {'fid': 'fid', 'Name': 'Name', 'Area_Code': 'Area_Code', 'Area_Descr': 'Area_Descr', 'File_Name': 'File_Name', 'Feature_Se': 'Feature_Se', 'Collection': 'Collection', 'Global_Pol': 'Global_Pol', 'Admin_Unit': 'Admin_Unit', 'Census_Cod': 'Census_Cod', 'Hectares': 'Hectares', 'Non_Inland': 'Non_Inland', 'Area_Type_': 'Area_Type_', 'Area_Typ_1': 'Area_Typ_1', 'Non_Area_T': 'Non_Area_T', 'Non_Area_1': 'Non_Area_1', });
 lyr_Walks_1.set('fieldImages', {'fid': 'TextEdit', 'FileName': 'TextEdit', 'Length': 'TextEdit', 'link': 'TextEdit', 'Date Walked': 'DateTime', 'Notes': 'TextEdit', });
-lyr_POI_2.set('fieldImages', {'fid': 'TextEdit', 'ID': 'TextEdit', 'Name': 'TextEdit', 'Type': 'TextEdit', 'Link': 'TextEdit', 'Description': 'TextEdit', });
-lyr_NorthumberlandNamedStones_3.set('fieldImages', {'fid': 'TextEdit', 'ID': 'TextEdit', 'Name': 'TextEdit', 'description': 'TextEdit', 'Image': 'ExternalResource', 'alias': 'TextEdit', });
+lyr_EnglandScotlandBorder_2.set('fieldImages', {'fid': 'TextEdit', 'Name': 'TextEdit', 'Area_Code': 'TextEdit', 'Area_Descr': 'TextEdit', 'File_Name': 'TextEdit', 'Feature_Se': 'TextEdit', 'Collection': 'TextEdit', 'Global_Pol': 'TextEdit', 'Admin_Unit': 'TextEdit', 'Census_Cod': 'TextEdit', 'Hectares': 'TextEdit', 'Non_Inland': 'TextEdit', 'Area_Type_': 'TextEdit', 'Area_Typ_1': 'TextEdit', 'Non_Area_T': 'TextEdit', 'Non_Area_1': 'TextEdit', });
 lyr_Walks_1.set('fieldLabels', {'fid': 'hidden field', 'FileName': 'no label', 'Length': 'no label', 'link': 'no label', 'Date Walked': 'inline label - always visible', 'Notes': 'no label', });
-lyr_POI_2.set('fieldLabels', {'fid': 'hidden field', 'ID': 'hidden field', 'Name': 'no label', 'Type': 'no label', 'Link': 'no label', 'Description': 'no label', });
-lyr_NorthumberlandNamedStones_3.set('fieldLabels', {'fid': 'hidden field', 'ID': 'hidden field', 'Name': 'no label', 'description': 'no label', 'Image': 'no label', 'alias': 'no label', });
-lyr_NorthumberlandNamedStones_3.on('precompose', function(evt) {
+lyr_EnglandScotlandBorder_2.set('fieldLabels', {'fid': 'no label', 'Name': 'no label', 'Area_Code': 'no label', 'Area_Descr': 'no label', 'File_Name': 'no label', 'Feature_Se': 'no label', 'Collection': 'no label', 'Global_Pol': 'no label', 'Admin_Unit': 'no label', 'Census_Cod': 'no label', 'Hectares': 'no label', 'Non_Inland': 'no label', 'Area_Type_': 'no label', 'Area_Typ_1': 'no label', 'Non_Area_T': 'no label', 'Non_Area_1': 'no label', });
+lyr_EnglandScotlandBorder_2.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
