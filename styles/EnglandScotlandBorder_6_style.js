@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_RockartPanels_3 = function(feature, resolution){
+var style_EnglandScotlandBorder_6 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -18,18 +18,12 @@ var style_RockartPanels_3 = function(feature, resolution){
     var offsetY = 3;
     var overflow = false;
     var repeat = 0;
-    var placement = 'point';
+    var placement = 'line';
     if ("" !== null) {
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        image: new ol.style.RegularShape({radius: 2.0 + size,
-                                          points: 4,
-                                          radius2: 0,
-                                          angle: Math.PI / 4,
-                                          displacement: [0, 0],
-                                          stroke: new ol.style.Stroke({color: 'rgba(255,193,7,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 2.28}),
-                                          fill: new ol.style.Fill({color: 'rgba(160,80,0,1.0)'})}),
+        stroke: new ol.style.Stroke({color: 'rgba(30,136,229,1.0)', lineDash: [1.9,3.8], lineCap: 'round', lineJoin: 'round', width: 1.9}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)
