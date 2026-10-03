@@ -46,20 +46,21 @@ var lyr_POI_2 = new ol.layer.Vector({
                 popuplayertitle: 'POI',
                 interactive: true,
     title: 'POI<br />\
-    <img src="styles/legend/POI_2_0.png" /> Building<br />\
-    <img src="styles/legend/POI_2_1.png" /> Chalybeate spring <br />\
-    <img src="styles/legend/POI_2_2.png" /> Cup and Ring Marked Rock<br />\
-    <img src="styles/legend/POI_2_3.png" /> Earthworks<br />\
-    <img src="styles/legend/POI_2_4.png" /> Memorial<br />\
-    <img src="styles/legend/POI_2_5.png" /> Nothing<br />\
-    <img src="styles/legend/POI_2_6.png" /> Other<br />\
-    <img src="styles/legend/POI_2_7.png" /> Plane Wreck<br />\
-    <img src="styles/legend/POI_2_8.png" /> ruin<br />\
-    <img src="styles/legend/POI_2_9.png" /> Ruin<br />\
-    <img src="styles/legend/POI_2_10.png" /> Stone<br />\
-    <img src="styles/legend/POI_2_11.png" /> Unknown<br />\
-    <img src="styles/legend/POI_2_12.png" /> Well or Spring<br />\
-    <img src="styles/legend/POI_2_13.png" /> <br />' });
+    <img src="styles/legend/POI_2_0.png" /> Bothy<br />\
+    <img src="styles/legend/POI_2_1.png" /> Building<br />\
+    <img src="styles/legend/POI_2_2.png" /> Chalybeate spring <br />\
+    <img src="styles/legend/POI_2_3.png" /> Cup and Ring Marked Rock<br />\
+    <img src="styles/legend/POI_2_4.png" /> Earthworks<br />\
+    <img src="styles/legend/POI_2_5.png" /> Eathwork<br />\
+    <img src="styles/legend/POI_2_6.png" /> Memorial<br />\
+    <img src="styles/legend/POI_2_7.png" /> Nothing<br />\
+    <img src="styles/legend/POI_2_8.png" /> Other<br />\
+    <img src="styles/legend/POI_2_9.png" /> Plane Wreck<br />\
+    <img src="styles/legend/POI_2_10.png" /> Ruin<br />\
+    <img src="styles/legend/POI_2_11.png" /> Stone<br />\
+    <img src="styles/legend/POI_2_12.png" /> Unknown<br />\
+    <img src="styles/legend/POI_2_13.png" /> Well or Spring<br />\
+    <img src="styles/legend/POI_2_14.png" /> <br />' });
 var format_NorthumberlandNamedStones_3 = new ol.format.GeoJSON();
 var features_NorthumberlandNamedStones_3 = format_NorthumberlandNamedStones_3.readFeatures(json_NorthumberlandNamedStones_3, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
